@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 const express = require('express');
 // TO AVOID USING SESSIONS WE WILL JUST USE COOKIES TO HAVE LESS CODE FOR AUTHENTICATION AND STORING THE USER DATA ON REQ.USER FOR EVERY REQUEST IN THE DATABASE
 const cookieParser = require('cookie-parser');
