@@ -1,4 +1,11 @@
-const dbConnection = process.env.DATABASE_URL;
+const localPgConnection = {
+  host: 'localhost', // address to find the db server
+  database: 'lambda',
+  user: 'luis',
+  password: 'pass'
+};
+// where is DATABASE_URL coming from?
+const dbConnection = process.env.DATABASE_URL || localPgConnection;
 
 module.exports = {
   development: {
